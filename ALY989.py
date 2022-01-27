@@ -35,7 +35,7 @@ def start(robot):
         while UltrasonicSensor.distance > 20:
             robot.straight(10)
             robot.turn(90)
-            robot.straight(360)
-            robot.turn(-90)
+    robot.straight(360)
+    robot.turn(-90)
     distance()
     angle()
