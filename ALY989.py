@@ -23,11 +23,12 @@ ev3 = EV3Brick()
 # Initialize the motors.
 left_motor = Motor(Port.B)
 right_motor = Motor(Port.C)
+UltrasonicSensor = UltrasonicSensor(S1)
 
 # Initialize the drive base. 
 robot = DriveBase(left_motor, right_motor, wheel_diameter=55.5, axle_track=104)
 
-def start(robot):
+def start(robot,UltrasonicSensor):
     if Button.left == true:
         while UltrasonicSensor.distance > 20:
             robot.straight(10)
