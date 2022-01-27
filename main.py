@@ -22,11 +22,11 @@ import ALY989
 # Initialize the EV3 Brick. 
 ev3 = EV3Brick()
 
-# Initialize the motors. Initialize motors using the ports
+# Initialize the motors. Initialize motors using the letter ports
 left_motor = Motor(Port.B)
 right_motor = Motor(Port.C)
-#sensors are initialized by doing S and then the number
-UltrasonicSensor = UltrasonicSensor(S1)
+#sensors are initialized by using the S ports
+UltrasonicSensor = UltrasonicSensor(Port.S1)
 
 # Initialize the drive base. 
 # MIGHT WANT TO CHECK TO MAKE SURE THIS IS RIGHT
