@@ -22,9 +22,11 @@ import ALY989
 # Initialize the EV3 Brick.
 ev3 = EV3Brick()
 
-# Initialize the motors.
+# Initialize the motors. Initialize motors using the ports
 left_motor = Motor(Port.B)
 right_motor = Motor(Port.C)
+#sensors are initialized by doing S and then the number
+UltrasonicSensor = UltrasonicSensor(S1)
 
 # Initialize the drive base. 
 # MIGHT WANT TO CHECK TO MAKE SURE THIS IS RIGHT
@@ -32,5 +34,19 @@ robot = DriveBase(left_motor, right_motor, wheel_diameter=55.5, axle_track=104)
 
 #Start of the program. Press left button if the robot is on the left side. Press the right button if the robot is on the right side.
 ALY989.start()
+# Go forward and backwards for one meter.
+robot.straight(1000)
+ev3.speaker.beep()
 
+robot.straight(-1000)
+ev3.speaker.beep()
+
+# Turn clockwise by 360 degrees and back again.
+robot.turn(360)
+ev3.speaker.beep()
+
+robot.turn(-360)
+ev3.speaker.beep()
+
+challengeTemplate.doChallenge(robot)
 # --- End Example Program ---
