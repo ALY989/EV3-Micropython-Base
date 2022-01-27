@@ -15,18 +15,7 @@ import challengeTemplate
 # How to implement timing and logging in your program: https://pybricks.com/ev3-micropython/tools.html
 # Rule book: https://firstinspiresst01.blob.core.windows.net/first-forward/fll-challenge/fll-challenge-cargo-connect-robot-game-rulebook.pdf
 
-# --- Begin Example Program ---
-
-# Initialize the EV3 Brick.
-ev3 = EV3Brick()
-
-# Initialize the motors.
-left_motor = Motor(Port.B)
-right_motor = Motor(Port.C)
-
-# Initialize the drive base. 
-robot = DriveBase(left_motor, right_motor, wheel_diameter=55.5, axle_track=104)
-
+# --- Begin Program ---
 def start(ev3, robot,ultrasonicSensor):
     if Button.left == true:
         while ultrasonicSensor.distance > 20:
