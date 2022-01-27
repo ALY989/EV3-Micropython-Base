@@ -26,7 +26,7 @@ ev3 = EV3Brick()
 left_motor = Motor(Port.B)
 right_motor = Motor(Port.C)
 #sensors are initialized by doing S and then the number
-UltrasonicSensor = UltrasonicSensor(Port.s1)
+UltrasonicSensor = UltrasonicSensor(Port.S1)
 
 # Initialize the drive base. 
 # MIGHT WANT TO CHECK TO MAKE SURE THIS IS RIGHT
