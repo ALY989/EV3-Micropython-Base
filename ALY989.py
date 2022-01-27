@@ -17,10 +17,10 @@ import challengeTemplate
 
 # --- Begin Program ---
 def start(ev3, robot,ultrasonicSensor):
-    if Button.LEFT == True:
+    if Button.LEFT == button.pressed(True):
         while ultrasonicSensor.distance > 20:
             robot.straight(10)
-    if Button.RIGHT == True:
+    if Button.RIGHT == button.pressed(True):
         while ultrasonicSensor.distance > 20:
             robot.straight(10)
             robot.turn(90)
