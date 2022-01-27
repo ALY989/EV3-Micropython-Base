@@ -27,12 +27,15 @@ right_motor = Motor(Port.C)
 # Initialize the drive base. 
 robot = DriveBase(left_motor, right_motor, wheel_diameter=55.5, axle_track=104)
 
-if Button.left == true:
-    while UltrasonicSensor.distance > 20:
-        robot.straight(10)
-if Button.right == true:
-    while UltrasonicSensor.distance > 20:
-        robot.straight(10)
-        robot.turn(90)
-        robot.straight(360)
-        robot.turn(-90)
+def start():
+    if Button.left == true:
+        while UltrasonicSensor.distance > 20:
+            robot.straight(10)
+    if Button.right == true:
+        while UltrasonicSensor.distance > 20:
+            robot.straight(10)
+            robot.turn(90)
+            robot.straight(360)
+            robot.turn(-90)
+    distance()
+    angle()
