@@ -26,15 +26,16 @@ ev3 = EV3Brick()
 left_motor = Motor(Port.B)
 right_motor = Motor(Port.C)
 #sensors are initialized by doing S and then the number
-UltrasonicSensor = UltrasonicSensor(Port.S1)
+ultrasonicSensor = UltrasonicSensor(Port.S1)
 
 # Initialize the drive base. 
 # MIGHT WANT TO CHECK TO MAKE SURE THIS IS RIGHT
 robot = DriveBase(left_motor, right_motor, wheel_diameter=55.5, axle_track=104)
 
 #Start of the program. Press left button if the robot is on the left side. Press the right button if the robot is on the right side.
-robot.settings(1000,1000,1000,1000)
-ALY989.start(ev3, robot, UltrasonicSensor)
+robot.settings(10000,10000,10000,10000)
+ALY989.start(ev3, robot, ultrasonicSensor)
+andy.hardCodedPath(ev3, robot)
 
 # Go forward and backwards for one meter.
 robot.straight(1000)

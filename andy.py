@@ -27,10 +27,8 @@ right_motor = Motor(Port.C)
 # MIGHT WANT TO CHECK TO MAKE SURE THIS IS RIGHT
 robot = DriveBase(left_motor, right_motor, wheel_diameter=55.5, axle_track=104)
 
-def exitButton(): 
-    while True:
-        if button.enter():
-            ev3.speaker.beep().wait()
-            exit()
-        else:
-            sleep(0.01)
+def hardCodedPath(ev3, robot):
+    robot.turn(15)
+    robot.straight(1500)
+    robot.straight(-1500)
+    
