@@ -26,5 +26,3 @@ def start(ev3, robot,ultrasonicSensor):
             robot.turn(90)
     robot.straight(360)
     robot.turn(-90)
-    distance()
-    angle()
