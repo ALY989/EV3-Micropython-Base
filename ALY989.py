@@ -19,6 +19,6 @@ import challengeTemplate
 def start(ev3, robot,ultrasonicSensor):
     robot.straight(1000)
     while ultrasonicSensor.distance > 20:
-        robot.straight(10)
+        robot.drive(100,0)
     robot.straight(360)
     robot.turn(-90)
